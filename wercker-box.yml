@@ -22,7 +22,10 @@ script : |
   sudo tar -C /usr/local -xzf go${version}.linux-amd64.tar.gz
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
   rm go${version}.linux-amd64.tar.gz
-
+  
+  # Set vips
+  curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo bash -
+  
   # Set GOPATH
   export GOPATH="$HOME/go"
   echo 'export GOPATH="$HOME/go"' | sudo tee -a /etc/profile
