@@ -1,4 +1,4 @@
-name: golang
+name: fernandez-golang
 version: 1.3.3
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type : main
@@ -7,6 +7,7 @@ description : golang
 keywords:
   - golang
   - go
+  - vips
 packages :
   - golang@1.4.2
   - git
